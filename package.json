@@ -1,0 +1,12 @@
+{
+  "name": "com.github.prossel.unity-inactivity-reset",
+  "displayName": "Inactivity Reset",
+  "description": "A simple inactivity reset system for Unity.",
+  "unity": "2021.3",
+  "unityRelease": "0f1",
+  "licenseSpdxId": "MIT",
+  "licenseName": "MIT License",
+  "repoUrl": "https://github.com/prossel/Unity-Inactivity-Reset",
+  "version": "1.0.0",
+  "type": "library"
+}
