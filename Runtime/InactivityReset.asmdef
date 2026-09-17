@@ -2,7 +2,8 @@
     "name": "InactivityReset",
     "rootNamespace": "",
     "references": [
-        
+        "Unity.InputSystem",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
