@@ -4,6 +4,8 @@ A simple inactivity reset system for Unity.
 
 [https://github.com/prossel/Unity-Inactivity-Reset](https://github.com/prossel/Unity-Inactivity-Reset)
 
+![screenshot](Screenshots/Inactivity-reset-countdown.jpg)
+
 ## Installation
 
 ### With package manager
