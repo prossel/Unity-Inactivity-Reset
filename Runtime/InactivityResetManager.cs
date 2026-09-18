@@ -26,7 +26,12 @@ namespace InactivityReset
         [Header("Runtime")]
         [SerializeField] private bool autoCreateOverlay = true;
 
-        public UnityEvent OnBeforeReset { get; } = new UnityEvent();
+        [Header("Events")]
+        [SerializeField] private UnityEvent onBeforeReset = new UnityEvent();
+        [SerializeField] private UnityEvent onAfterReset = new UnityEvent();
+
+        public UnityEvent OnBeforeReset => onBeforeReset;
+        public UnityEvent OnAfterReset => onAfterReset;
 
         private State currentState = State.Monitoring;
         private ActivityMonitor activityMonitor;
@@ -131,7 +136,7 @@ namespace InactivityReset
                 overlay.Hide();
             }
 
-            OnBeforeReset?.Invoke();
+            onBeforeReset?.Invoke();
             StartCoroutine(LoadResetSceneAfterCleanup());
         }
 
@@ -184,6 +189,7 @@ namespace InactivityReset
                 currentState = State.Monitoring;
                 idleTimer = 0f;
                 countdownRemaining = CountdownDurationSeconds;
+                onAfterReset?.Invoke();
             }
             else
             {
