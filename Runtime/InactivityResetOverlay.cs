@@ -117,7 +117,7 @@ namespace InactivityReset
             cancelButton = CreateButton("CancelButton", transform, new Color(0f, 0f, 0f, 0f));
             cancelButton.onClick.AddListener(() => manager.CancelCountdown());
 
-            var cancelText = CreateTextChild("CancelText", cancelButton.transform, "✕");
+            var cancelText = CreateTextChild("CancelText", cancelButton.transform, "X");
             cancelText.alignment = TextAlignmentOptions.Center;
             cancelText.fontSize = 72;
             cancelText.color = new Color(0.85f, 0.85f, 0.85f, 1f);
